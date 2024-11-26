@@ -1,0 +1,1153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9135EC23-3BD3-4401-BF5A-E6034C2D25D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FoodOrderingSystem.My.MyApplication</StartupObject>
+    <RootNamespace>FoodOrderingSystem</RootNamespace>
+    <AssemblyName>FoodOrderingSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FoodOrderingSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FoodOrderingSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DB.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="edit_profile.designer.vb">
+      <DependentUpon>edit_profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="edit_profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback.designer.vb">
+      <DependentUpon>feedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgot_password.designer.vb">
+      <DependentUpon>forgot_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forgot_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAction.designer.vb">
+      <DependentUpon>FrmAction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMember.designer.vb">
+      <DependentUpon>FrmAddMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddMenu.designer.vb">
+      <DependentUpon>frmAddMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddRedeem.designer.vb">
+      <DependentUpon>FrmAddRedeem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddRedeem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBBQNGrill.designer.vb">
+      <DependentUpon>frmBBQNGrill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBBQNGrill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteMenu.designer.vb">
+      <DependentUpon>frmDeleteMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuReport.designer.vb">
+      <DependentUpon>frmMenuReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasta.designer.vb">
+      <DependentUpon>frmPasta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPizza.designer.vb">
+      <DependentUpon>frmPizza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPizza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductAction.designer.vb">
+      <DependentUpon>FrmProductAction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductAction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRedeemQrCode.designer.vb">
+      <DependentUpon>FrmRedeemQrCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRedeemQrCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRedeemtion.designer.vb">
+      <DependentUpon>FrmRedeemtion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRedeemtion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalad.designer.vb">
+      <DependentUpon>frmSalad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoupNStew.designer.vb">
+      <DependentUpon>frmSoupNStew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSoupNStew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.vb">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage2.designer.vb">
+      <DependentUpon>manage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager HomePage.designer.vb">
+      <DependentUpon>Manager HomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manager HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_redeem.designer.vb">
+      <DependentUpon>manage_redeem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manage_redeem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="memberRegister.designer.vb">
+      <DependentUpon>memberRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memberRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_login.designer.vb">
+      <DependentUpon>member_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_profile.designer.vb">
+      <DependentUpon>member_profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDatabase.vb" />
+    <Compile Include="Method.vb" />
+    <Compile Include="ModuleDatabase.vb" />
+    <Compile Include="Module_Member.vb" />
+    <Compile Include="mStaff Update.designer.vb">
+      <DependentUpon>mStaff Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mStaff Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mStaffSearch Update.designer.vb">
+      <DependentUpon>mStaffSearch Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mStaffSearch Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="payment2.designer.vb">
+      <DependentUpon>payment2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="payment2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paymentMethod.designer.vb">
+      <DependentUpon>paymentMethod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="paymentMethod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReport.designer.vb">
+      <DependentUpon>PaymentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PModuleDatabase.vb" />
+    <Compile Include="points.designer.vb">
+      <DependentUpon>points.vb</DependentUpon>
+    </Compile>
+    <Compile Include="points.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preparing.designer.vb">
+      <DependentUpon>preparing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="preparing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qr.designer.vb">
+      <DependentUpon>qr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="qr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RedeemVoucher.designer.vb">
+      <DependentUpon>RedeemVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RedeemVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="redeem_product.designer.vb">
+      <DependentUpon>redeem_product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="redeem_product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reset_password.designer.vb">
+      <DependentUpon>reset_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reset_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundCorner.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundedGroupBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Staff Forgot Password.designer.vb">
+      <DependentUpon>Staff Forgot Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Forgot Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Login.designer.vb">
+      <DependentUpon>Staff Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff MainPage.designer.vb">
+      <DependentUpon>Staff MainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff MainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Password Reset.designer.vb">
+      <DependentUpon>Staff Password Reset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Password Reset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Register.designer.vb">
+      <DependentUpon>Staff Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Report.designer.vb">
+      <DependentUpon>Staff Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff Update.designer.vb">
+      <DependentUpon>Staff Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff View.designer.vb">
+      <DependentUpon>Staff View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Staff View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffFormList.designer.vb">
+      <DependentUpon>staffFormList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staffFormList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="successful.designer.vb">
+      <DependentUpon>successful.vb</DependentUpon>
+    </Compile>
+    <Compile Include="successful.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testaddcart.designer.vb">
+      <DependentUpon>testaddcart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testaddcart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TingForm1.designer.vb">
+      <DependentUpon>TingForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TingForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voucher.designer.vb">
+      <DependentUpon>voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="voucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="voucherDetails.designer.vb">
+      <DependentUpon>voucherDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="voucherDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="edit_profile.resx">
+      <DependentUpon>edit_profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.resx">
+      <DependentUpon>feedback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgot_password.resx">
+      <DependentUpon>forgot_password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAction.resx">
+      <DependentUpon>FrmAction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMember.resx">
+      <DependentUpon>FrmAddMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddMenu.resx">
+      <DependentUpon>frmAddMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddRedeem.resx">
+      <DependentUpon>FrmAddRedeem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBBQNGrill.resx">
+      <DependentUpon>frmBBQNGrill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteMenu.resx">
+      <DependentUpon>frmDeleteMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuReport.resx">
+      <DependentUpon>frmMenuReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPasta.resx">
+      <DependentUpon>frmPasta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPizza.resx">
+      <DependentUpon>frmPizza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductAction.resx">
+      <DependentUpon>FrmProductAction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRedeemQrCode.resx">
+      <DependentUpon>FrmRedeemQrCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRedeemtion.resx">
+      <DependentUpon>FrmRedeemtion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalad.resx">
+      <DependentUpon>frmSalad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoupNStew.resx">
+      <DependentUpon>frmSoupNStew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage2.resx">
+      <DependentUpon>manage2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager HomePage.resx">
+      <DependentUpon>Manager HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_redeem.resx">
+      <DependentUpon>manage_redeem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberRegister.resx">
+      <DependentUpon>memberRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_login.resx">
+      <DependentUpon>member_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_profile.resx">
+      <DependentUpon>member_profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mStaff Update.resx">
+      <DependentUpon>mStaff Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mStaffSearch Update.resx">
+      <DependentUpon>mStaffSearch Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment2.resx">
+      <DependentUpon>payment2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paymentMethod.resx">
+      <DependentUpon>paymentMethod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReport.resx">
+      <DependentUpon>PaymentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="points.resx">
+      <DependentUpon>points.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="preparing.resx">
+      <DependentUpon>preparing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qr.resx">
+      <DependentUpon>qr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RedeemVoucher.resx">
+      <DependentUpon>RedeemVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="redeem_product.resx">
+      <DependentUpon>redeem_product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reset_password.resx">
+      <DependentUpon>reset_password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Forgot Password.resx">
+      <DependentUpon>Staff Forgot Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Login.resx">
+      <DependentUpon>Staff Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff MainPage.resx">
+      <DependentUpon>Staff MainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Password Reset.resx">
+      <DependentUpon>Staff Password Reset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Register.resx">
+      <DependentUpon>Staff Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Report.resx">
+      <DependentUpon>Staff Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff Update.resx">
+      <DependentUpon>Staff Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff View.resx">
+      <DependentUpon>Staff View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffFormList.resx">
+      <DependentUpon>staffFormList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="successful.resx">
+      <DependentUpon>successful.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testaddcart.resx">
+      <DependentUpon>testaddcart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TingForm1.resx">
+      <DependentUpon>TingForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="voucher.resx">
+      <DependentUpon>voucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="voucherDetails.resx">
+      <DependentUpon>voucherDetails.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DB.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB.dbml.layout">
+      <DependentUpon>DB.dbml</DependentUpon>
+    </None>
+    <None Include="DBDataSet.xsc">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBDataSet.xss">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MemberDataSet.xsc">
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MemberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemberDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MemberDataSet.xss">
+      <DependentUpon>MemberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\1000_F_582662168_OoVs6iG7Vq59jeHivw158V9AEeI6CIfC-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1345874.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2465177-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26707-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28386.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\305841-food-wallpaper-top-free-food-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\310679.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4631.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\506778.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5507757-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5974627.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6048399.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6713699.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6713699-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83120821.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8312082.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMenuBckgrd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appetizing-spaghetti-italian-pasta-with-tomato-sauce1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appetizing-spaghetti-italian-pasta-with-tomato-sauce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BBQNGrillIcon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheesy wedges1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheesy wedges.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chefRecommended.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chefRecommended2Icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chefRecommendedIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicStew.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circular-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classicBolognesePasta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classicChicAlfredoPasta.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dionysius-samuel-MorQQsH4ehE-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fiberPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fried-onion-rings1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fried-onion-rings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\friedChicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fries1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front-view-fried-meat-slices-with-greens-inside-black-plate-with-glass-wine-brown-wooden-desk-meal-food-meat-diner1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front-view-fried-meat-slices-with-greens-inside-black-plate-with-glass-wine-brown-wooden-desk-meal-food-meat-diner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garlicLemonChicSalad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenCoralSalad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hainanChicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hawaiianPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-arrow-button-clip-art-down-arrow-png-free-download-5a756e1962f122.5847451115176453374053-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lasagnaSoup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macaroniAndCheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meat-burger-bread-bun-cut-into-two-pieces1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meat-burger-bread-bun-cut-into-two-pieces.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\one-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinepay-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-recycle-bin-trash-can-icon-in-circle-line-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orderIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastaIcon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepperoniPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-cream-of-mushroom-soup-restaurant-dish-gurmaniya-menu-soup-recipe-cafe-thumbnail-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-icon-close-button-png-image_3262195.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-icon-close-button-png-image_3262195-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-rounded-flat-vector-icon-of-a-red-trash-can-vector-picture-image_9721363.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-completed-symbolic-icon-1024x1024-d0yilrlw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redeemback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redeembackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redeembackground1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reward_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reward_focus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reward1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salad1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saladIcon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sald.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seafoodAglioOlio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallPizzaIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallPizzaIcon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallPizzaIcon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snackPlate.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soupIcon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tofuSalad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomatoBeefSoup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-circle-icon-512x512-sbselndh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tunaPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload-big-arrow %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_focus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voucherr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zapbalangPizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB.mdf" />
+    <Content Include="DB_log.ldf">
+      <DependentUpon>DB.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\star_1828970.png" />
+    <None Include="Resources\star_1828884.png" />
+    <None Include="Resources\image_processing20201028-18652-1o70qbz.gif" />
+    <None Include="Resources\check02.gif" />
+    <None Include="Resources\bad %282%29d.png" />
+    <None Include="Resources\bad %282%29.png" />
+    <None Include="Resources\bad %281%29.png" />
+    <None Include="Resources\6963703.png" />
+    <None Include="Resources\3917132.png" />
+    <None Include="Resources\1796819.png" />
+    <None Include="Resources\1159417.png" />
+    <None Include="Resources\438526.png" />
+    <None Include="Resources\left-arrow.png" />
+    <None Include="Resources\previous.png" />
+    <None Include="Resources\reward %281%29.png" />
+    <None Include="Resources\box %283%29.png" />
+    <None Include="Resources\feedback %281%29.png" />
+    <None Include="Resources\feedback.png" />
+    <None Include="Resources\handrawn-barbecue-elements.jpg" />
+    <None Include="Resources\conceptual-business-illustration-with-pink-pastel-blocks-icons.jpg" />
+    <None Include="Resources\team.png" />
+    <None Include="Resources\supply-chain.png" />
+    <None Include="Resources\manage_member.png" />
+    <None Include="Resources\managemember.png" />
+    <None Include="Resources\pointsBckgrd.jpg" />
+    <None Include="Resources\logoutIcon.jpg" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\member-card.png" />
+    <None Include="Resources\family %281%29.png" />
+    <None Include="Resources\family.png" />
+    <None Include="Resources\soupAndStewBckgrd.jpg" />
+    <None Include="Resources\saladBckgrd.jpg" />
+    <None Include="Resources\pizzaBckgrd.jpg" />
+    <None Include="Resources\pastaBckgrd.jpg" />
+    <None Include="Resources\restaurantlogo.png" />
+    <None Include="Resources\deleteIcon.png" />
+    <None Include="Resources\addEditMenuIcon.png" />
+    <None Include="Resources\menuReportIcon.png" />
+    <None Include="Resources\BBQNGrillBckgrd.jpg" />
+    <None Include="Resources\pic3.jpg" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\pic1.jpg" />
+    <None Include="Resources\pic2.jpg" />
+    <None Include="Resources\product %281%29.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\no_image.png" />
+    <None Include="Resources\mcancel.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\newspaper.png" />
+    <None Include="Resources\arrow-circle-up.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
